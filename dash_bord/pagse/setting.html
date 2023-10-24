@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash UI - Next.Js Admin Dashboard Template</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="background_signin">
+    <div class="container-fluid p-0">
+      <!-- startnavbar -->
+      <dav class="d-flex navbar-light bg-body justify-content-between">
+        <div class="d-flex">
+          <!-- startsiadbar -->
+          <div id="mySidebar" class="sidebar">
+            <a
+              href="javascript:void(0)"
+              class="closebtn text-light"
+              onclick="closeNav()"
+              >×</a
+            >
+            <a href="../index.html" class="px-4 fs-4 fw-bold">Dash Ul</a>
+            <a href="../index.html" class="px-4 mt-5"
+              ><i class="fa-solid fa-house pe-2"></i>Dashborad</a
+            >
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >LAYOUTS & PAGES</span
+            >
+            <a
+              class="sidbar-hover mx-4 mt-5 dropdown-toggle opacity-75"
+              href="#sidebarcollapse"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-building-columns opacity-75 pe-2"></i
+              >pages</a
+            >
+
+            <div class="collapse" id="sidebarcollapse">
+              <a
+                href="./profile.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >profile</a
+              >
+              <a
+                href="./setting.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >settings</a
+              >
+              <a
+                href="./Billing.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Billing</a
+              >
+              <a
+                href="./Pricing.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >pricing</a
+              >
+              <a
+                href="./erorr.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >404& Erorr</a
+              >
+            </div>
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebardrob"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-lock pe-2"></i> Authentication</a
+            >
+
+            <div class="collapse" id="sidebardrob">
+              <a
+                href="../Authentication/signin.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Sign in</a
+              >
+              <a
+                href="../Authentication/signup.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Sign Up</a
+              >
+              <a
+                href="../Authentication/Forget.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Forget Password</a
+              >
+            </div>
+            <div>
+              <a href="../Layouts.html" class="px-4 mt-4 opacity-75 sidbar-hover"
+                ><i class="fa-solid fa-book pe-3"></i>Layouts</a
+              >
+            </div>
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >UI COMPONENTS</span
+            >
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebardrobdown"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-desktop pe-2"></i>Components</a
+            >
+
+            <div class="collapse" id="sidebardrobdown">
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/accordions"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Accordions</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/alerts"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Alerts</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/badges"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Badges</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/breadcrumbs"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Breadcrumbs</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/buttons"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Buttons</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/button-group"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >ButtonGroup</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/cards"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Cards</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/carousels"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Carousel</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/close-button"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Close Button</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/collapse"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Collapse</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/dropdowns"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Dropdowns</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/list-group"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Listgroup</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/modal"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Modal</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/navs"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Navs</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/navbar"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Navbar</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/offcanvas"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Offcanvas</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/overlays"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Overlays</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/pagination"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Pagination</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/popovers"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Popovers</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/progress"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Progress</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/spinners"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Spinners</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/tables"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Tables</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/toasts"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Toasts</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/tooltips"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Tooltips</a
+              >
+            </div>
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebarMenu"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-arrow-turn-down pe-3"></i>Menu Level</a
+            >
+
+            <div class="collapse" id="sidebarMenu">
+              <a
+                class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                href="#sidebartowlevel"
+                data-bs-toggle="collapse"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                Two Level</a
+              >
+
+              <div class="collapse" id="sidebartowlevel">
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3 px-4"
+                  >Navitem 1</a
+                >
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4"
+                  >Navitem 2</a
+                >
+              </div>
+              <a
+                class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                href="#sidebarThreeLevel"
+                data-bs-toggle="collapse"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >Three Level</a
+              >
+
+              <div class="collapse" id="sidebarThreeLevel">
+                <a
+                  class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                  href="#sidebarNavitem"
+                  data-bs-toggle="collapse"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  >Navitem 1</a
+                >
+
+                <div class="collapse" id="sidebarNavitem">
+                  <a
+                    href="#"
+                    class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3 px-4 pe-4"
+                    >NavChilditem 1</a
+                  >
+                  <a
+                    href="#"
+                    class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4 pe-4"
+                    >NavChilditem 2</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4"
+                  >Navitem 2</a
+                >
+              </div>
+            </div>
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >DOCUMENTATION</span
+            >
+            <a
+              href="../Docs.html"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+              ><i class="fa-solid fa-mattress-pillow"></i>Docs</a
+            >
+            <a
+              href="../Changelog.html"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+              ><i class="fa-solid fa-arrows-to-circle pe-1"></i>changelog</a
+            >
+            <a
+              href="https://codescandy.gumroad.com/l/dashui-nextjs"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+            >
+              <i class="fa-solid fa-download pe-2"></i>Download</a
+            >
+          </div>
+          <!-- end sidbar -->
+          <!-- strat Button sidbar -->
+          <div id="main">
+            <button class="openbtn border-0 bg-body" onclick="openNav()">
+              ☰
+            </button>
+          </div>
+          <!-- end Button sidbar -->
+          <!-- start navbar search -->
+          <div class="d-flex">
+            <form>
+              <input
+                class="form-control me-5 mt-3 w-75"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+          <!-- end navbar search -->
+        </div>
+        <!-- start navbar Button bell -->
+        <div class="d-flex mt-2">
+          <div class="dropdown-1">
+            <button class="dropbtn-3">
+              <i class="fa-regular fa-bell p-3 text-bg-light rounded-5"></i>
+            </button>
+            <div class="dropdown-content-2">
+              <div class="card card-bell-Button_docs">
+                <div class="card-header bg-white">
+                  <h5 class="float-start">Notifications</h5>
+                  <a href="#"
+                    ><i class="fa-solid fa-gear float-end mt-2"></i
+                  ></a>
+                </div>
+                <div class="card-body body-5 p-1">
+                  <div class="card-overflow">
+                    <div class="border-0 bg-light">
+                      <a href="#">
+                        <b>Ris chopra</b>
+                        <label class="opacity-75"
+                          >Mauris blandit erat id nunc blandit, ac eleifend
+                          dolor pretium</label
+                        >
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Neha Kannned</b>
+                        <label class="opacity-75"
+                          >Proin at elit vel est condimentum elementum id in
+                          ante. Maecenas et sapien metus.
+                        </label>
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Nirmala Chauhan</b>
+                        <label class="opacity-75"
+                          >Morbi Maximus nrna lobortis elit sollicitudin
+                          sollicitudieget elit vel pretium.
+                        </label>
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Sina Ray</b>
+                        <label class="opacity-75"
+                          >Sed aliquam augue sit amet mauris volutpat hendrerit
+                          sed nunc eu diam
+                        </label>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-w">
+                  <a
+                    href="https://dash-ui-admin-template.vercel.app/dashboard/notification-history"
+                    class="text-primary"
+                    target="_blank"
+                    >sell all Notifications</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- star Button img -->
+          <div class="dropdown-img">
+            <button class="dropbtn-img">
+              <img src="../imgs/avatar-1.jpg" class="img-Button" alt="" />
+            </button>
+            <div class="dropdown-content-img">
+              <div class="card card-img-Button" style="width: 13rem">
+                <div class="card-body justify-content-center">
+                  <h5>John E. Grainger</h5>
+                  <a href="#" class="Button-img-navbar opacity-75 text-black"
+                    >view my profile</a
+                  >
+                  <hr />
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-person pe-3"></i>Edit Profile</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-chart-line pe-3"></i>Activity Log</a
+                  >
+                  <a href="#" class="text-primary d-block mt-2">
+                    <i class="fa-regular fa-star pe-3"></i>Go Pro</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-gear pe-3"></i>Account Settings</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-power-off pe-3"></i>Sign Out</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end Button img -->
+        </div>
+        <!-- end navbar Button bell -->
+      </dav>
+      <!-- end navbar -->
+    </div>
+    <div class="container-fluid">
+      <div class="container_setting px-3">
+        <div class="mb-3 mt-4">
+          <h4 class="fw-bold">General</h4>
+        </div>
+        <hr />
+        <!-- start card General Settings  -->
+        <div class="d-flex flex-wrap justify-content-between" id="ivp">
+          <div>
+            <h5>General Setting</h5>
+            <p class="opacity-75">Profile configuration settings</p>
+          </div>
+          <div class="card cardGeneral_setting">
+            <div class="card-header border-0 bg-white">
+              <h6>General Settings</h6>
+            </div>
+            <div class="card-body d-flex flex-wrap cardbodyGeneral_setting">
+              <div>
+                <p>Avatar</p>
+              </div>
+              <div>
+                <img
+                  src="../imgs/avatar-5.jpg"
+                  class="imgcard_setting"
+                  alt=""
+                />
+                <button type="button" class="btncardGeneral_Setting">
+                  Change
+                </button>
+                <button type="button" class="btncardGeneral_Setting">
+                  Remove
+                </button>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-wrap justify-content-between">
+              <div>
+                <p>Cover photo</p>
+              </div>
+              <div>
+                <form>
+                  <div class="containerinputfile_setting">
+                    <label for="file"
+                      >Drag 'n' drop some files here, or click to select
+                      files</label
+                    >
+                    <input type="file" id="file" name="file" />
+                  </div>
+                  <div>
+                    <button class="btncardGeneral_Setting mt-3">Change</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card-header border-0 bg-white">
+              <h6>Basic information</h6>
+            </div>
+            <form action="">
+              <div class="card-body d-flex flex-wrap justify-content-between">
+                <div class="d-flex flex-wrap justify-content-between w-100">
+                  <p><label for="Full name">Full name</label></p>
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="text"
+                      id="Full name"
+                      placeholder="first name"
+                      class="form-control w-100"
+                    />
+                    <input
+                      type="text"
+                      id="Full name"
+                      placeholder="last name"
+                      class="form-control w-100"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between w-100">
+                  <p><label for="Email" class="mt-3">Email</label></p>
+
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="email"
+                      id="Email"
+                      placeholder="Email"
+                      class="form-control w-100 mt-3"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between w-100">
+                  <p>
+                    <label for="Phone" class="mt-3">Phone (Optional)</label>
+                  </p>
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="number"
+                      id="Phone"
+                      placeholder="Enter Phone"
+                      class="form-control w-100 mt-3"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between w-100">
+                  <p><label for="Location" class="mt-3">Location</label></p>
+                  <div class="inputfullnamecard_setting">
+                    <select name="" id="Location" class="form-select mt-3">
+                      <option value="0" selected disabled>
+                        select contery
+                      </option>
+                      <option value="1">india</option>
+                      <option value="2">US</option>
+                      <option value="3">UK</option>
+                      <option value="4">UAE</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between w-100">
+                  <p>
+                    <label for="Address line 1" class="mt-3"
+                      >Address line 1</label
+                    >
+                  </p>
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="text"
+                      id="Address line 1"
+                      placeholder="Enter Address line 1"
+                      class="form-control w-100 mt-3"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between w-100">
+                  <p>
+                    <label for="Address line 2" class="mt-3"
+                      >Address line 2</label
+                    >
+                  </p>
+
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="text"
+                      id="Address line 2"
+                      placeholder="Enter Address line 2"
+                      class="form-control w-100 mt-3"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between w-100">
+                  <p><label for="Zip code" class="mt-3">Zip code</label></p>
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="text"
+                      id="Zip code"
+                      placeholder="Enter Zip code"
+                      class="form-control w-100 mt-3"
+                    />
+                  </div>
+                </div>
+
+                <div class="btnformcard_setting">
+                  <button class="btn_footer_modal">Save Changes</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- end card General Settings  -->
+
+        <!-- start card Email -->
+        <div class="d-flex flex-wrap justify-content-between mt-5">
+          <div>
+            <h5>Email Setting</h5>
+            <p class="opacity-75">Add an email settings to profile</p>
+          </div>
+          <div class="card cardGeneral_setting">
+            <div class="card-header border-0 bg-white">
+              <h6>Email</h6>
+            </div>
+            <form action="">
+              <div class="card-body d-flex flex-wrap justify-content-between">
+                <div class="d-flex flex-wrap justify-content-between w-100">
+                  <p><label for="New email" class="mt-3">New email</label></p>
+
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="email"
+                      id="New email"
+                      placeholder="Enter your email Address"
+                      class="form-control w-100 mt-3"
+                    />
+                  </div>
+                </div>
+                <div class="btnformcard_setting">
+                  <button class="btn_footer_modal">Save Changes</button>
+                </div>
+              </div>
+            </form>
+            <div class="card-header border-0 bg-white">
+              <h6>Change your password</h6>
+            </div>
+            <form action="">
+              <div class="card-body d-flex flex-wrap justify-content-between">
+                <div
+                  class="d-flex flex-wrap justify-content-between w-100 mt-3"
+                >
+                  <p>
+                    <label for="Current password">Current password </label>
+                  </p>
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="password"
+                      id="Current password"
+                      placeholder="Enter Current password"
+                      class="form-control w-100"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="d-flex flex-wrap justify-content-between w-100 mt-3"
+                >
+                  <p>
+                    <label for="New password">New password </label>
+                  </p>
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="password"
+                      id="New password"
+                      placeholder="Enter New password"
+                      class="form-control w-100"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="d-flex flex-wrap justify-content-between w-100 mt-3"
+                >
+                  <p>
+                    <label for="Confirm new password"
+                      >Confirm new password
+                    </label>
+                  </p>
+                  <div class="inputfullnamecard_setting">
+                    <input
+                      type="password"
+                      id="Confirm new password"
+                      placeholder="Confirm new password"
+                      class="form-control w-100"
+                    />
+                  </div>
+                </div>
+                <div class="btnformcard_setting">
+                  <p class="mb-0" style="font-size: 13px">
+                    Password requirements:
+                  </p>
+                  <p class="opacity-75">
+                    Ensure that these requirements are met:
+                  </p>
+                  <ul>
+                    <li class="opacity-75">
+                      Minimum 8 characters long the more, the better
+                    </li>
+                    <li class="opacity-75">At least one lowercase character</li>
+                    <li class="opacity-75">At least one uppercase character</li>
+                    <li class="opacity-75">
+                      At least one number, symbol, or whitespace character
+                    </li>
+                  </ul>
+                  <button class="btn_footer_modal">Save Changes</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- end card Email -->
+        <!-- start card Preferences -->
+        <div class="d-flex flex-wrap justify-content-between mt-5">
+          <div>
+            <h5>Preferences</h5>
+            <p class="opacity-75">Configure your preferences</p>
+          </div>
+          <div class="card cardGeneral_setting">
+            <div class="card-header border-0 bg-white">
+              <h6>Preferences</h6>
+            </div>
+            <form action="">
+              <div class="card-body d-flex flex-wrap justify-content-between">
+                <div
+                  class="d-flex flex-wrap justify-content-between w-100 mt-3"
+                >
+                  <p><label for="Langauge">Langauge</label></p>
+                  <div class="inputfullnamecard_setting">
+                    <select name="" id="Langauge" class="form-select">
+                      <option value="0" selected disabled>
+                        select Langauge
+                      </option>
+                      <option value="1">English</option>
+                      <option value="2">Hindi</option>
+                      <option value="3">Spanish</option>
+                      <option value="4">Arabic</option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  class="d-flex flex-wrap justify-content-between w-100 mt-3"
+                >
+                  <p>
+                    <label for="Time Zone">Time Zone </label>
+                  </p>
+                  <div class="inputfullnamecard_setting">
+                    <select name="" id="Time Zone" class="form-select">
+                      <option value="0" selected disabled>
+                        select Langauge
+                      </option>
+                      <option value="1">GMT +5.30</option>
+                      <option value="2">GMT +5.30</option>
+                      <option value="3">GMT +5.30</option>
+                      <option value="4">GMT +5.30</option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  class="d-flex flex-wrap justify-content-between w-100 mt-3"
+                >
+                  <p>
+                    <label for="Date Format">Date Format</label>
+                  </p>
+                  <div class="inputfullnamecard_setting">
+                    <select name="" id="Date Format" class="form-select">
+                      <option value="0" selected disabled>
+                        select Langauge
+                      </option>
+                      <option value="1">No Preferences</option>
+                      <option value="2">Preferences</option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  class="d-flex flex-wrap justify-content-between w-100 mt-3"
+                >
+                  <p>
+                    <label for="Date Format">Default</label>
+                  </p>
+                  <div class="inputfullnamecard_setting">
+                    <div>
+                      <input
+                        type="radio"
+                        name="radio"
+                        class="form-check-input"
+                        id="on"
+                      />
+                      <label for="on">on</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        name="radio"
+                        class="form-check-input"
+                        id="of"
+                      />
+                      <label for="of">off</label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="d-flex flex-wrap justify-content-between w-100 mt-3"
+                >
+                  <p>
+                    <label for="Date Format">Choose option default</label>
+                  </p>
+                  <div class="inputfullnamecard_setting d-block">
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="checkbox"
+                        class="form-check-input"
+                        id="Tell me"
+                      />
+                      <label for="Tell me">Tell me</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id="Open e-mail"
+                      />
+                      <label for="Open e-mail">Open e-mail</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id="Show default"
+                      />
+                      <label for="Show default">Show default</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="btnformcard_setting">
+                  <button class="btn_footer_modal">Save Changes</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- end card Preferences -->
+        <!-- start card Notifications -->
+        <div class="d-flex flex-wrap justify-content-between mt-5">
+          <div>
+            <h5>Notifications</h5>
+            <p class="opacity-75">Change notification settings</p>
+          </div>
+          <div class="card cardGeneral_setting">
+            <div class="card-header border-0 bg-white">
+              <h6>Notification for email, mobile & Slack</h6>
+            </div>
+
+            <div class="card-body">
+              <!-- start alart  -->
+              <div
+                class="alert alert-warning alert-dismissible fade show mb-3"
+                role="alert"
+              >
+                To start using Slack for personal notifications, you should
+                first connect Slack.
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- end alart -->
+              <!-- start table -->
+              <div class="table-responsive">
+                <table class="table text-nowrap">
+                <thead class="table-light">
+                  <tr>
+                    <td scope="col" class="w-75">Activity & Conversation</td>
+                    <td scope="col">
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+                    </td>
+                    <td scope="col"><i class="fa-brands fa-slack"></i></td>
+                    <td scope="col"><i class="fa-regular fa-envelope"></i></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row"></td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        id=""
+                        class="form-check-input"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        id=""
+                        class="form-check-input"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        id=""
+                        class="form-check-input"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">When a Files is shared with a team</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td><i class="fa-solid fa-minus"></i></td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      When someone requests access to my design
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      When someone comments in threads I’m following
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      When someone @mentions me in any comments
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td><i class="fa-solid fa-minus"></i></td>
+                    <td><i class="fa-solid fa-minus"></i></td>
+                  </tr>
+                  <tr class="table-light">
+                    <td scope="row">Project Activity</td>
+                    <td scope="col">
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+                    </td>
+                    <td scope="col"><i class="fa-brands fa-slack"></i></td>
+                    <td scope="col"><i class="fa-regular fa-envelope"></i></td>
+                  </tr>
+                  <tr>
+                    <td scope="row">When someone adds me to a project</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td><i class="fa-solid fa-minus"></i></td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="table-light">
+                    <td scope="row">Team Activity</td>
+                    <td scope="col">
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+                    </td>
+                    <td scope="col"><i class="fa-brands fa-slack"></i></td>
+                    <td scope="col"><i class="fa-regular fa-envelope"></i></td>
+                  </tr>
+                  <tr>
+                    <td scope="row">When my invitees sign up</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">When someone requests access to my team</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td><i class="fa-solid fa-minus"></i></td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="pb-5">
+                      When someone invites me to a team
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="form-check-input"
+                        id=""
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            <!-- end table -->
+              <!-- start form  -->
+              <form>
+                <div class="d-flex flex-wrap justify-content-between">
+                  <div class="form_notification">
+                    <div>
+                      <label for="always"
+                        >When should we send you notifications?</label
+                      >
+                    </div>
+                    <div class="">
+                      <select name="" id="always" class="form-select mt-3">
+                        <option value="0" selected disabled>Alwas</option>
+                        <option value="1">one</option>
+                        <option value="2">two</option>
+                        <option value="3">three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form_notification ">
+                    <div>
+                      <label for="Daily Digest">Daily Digest</label>
+                    </div>
+                    <div class="">
+                      <select
+                        name=""
+                        id="Daily Digest"
+                        class="form-select mt-3"
+                      >
+                        <option value="0" selected disabled>Every day</option>
+                        <option value="1">one</option>
+                        <option value="2">two</option>
+                        <option value="3">three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form_notification ">
+                    <div>
+                      <label for="Time">Time</label>
+                    </div>
+                    <div class="">
+                      <select name="" id="Time" class="form-select mt-3">
+                        <option value="0" selected disabled>2pm</option>
+                        <option value="1">one</option>
+                        <option value="2">two</option>
+                        <option value="3">three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-3 mb-3">
+                    <button class="btn_footer_modal">Save Changes</button>
+                  </div>
+              </form>
+              <!-- end form -->
+            </div>
+          </div>
+        </div>
+        <!-- end card Notifications -->
+        <!-- start Danger Zone -->
+        <div class="d-flex flex-wrap justify-content-between mt-5 mb-5">
+           <div>
+            <h5>Delete Account</h5>
+            <p class="opacity-75">Easily set up social media accounts</p>
+          </div>
+          <div class="card cardGeneral_setting">
+            <div class="card-header border-0 bg-white">
+              <h6>Danger Zone</h6>
+            </div>
+            <div class="card-body">
+              <p class="opacity-75">Delete any and all content you have, such as articles, comments, your reading list or chat messages. Allow your username to become available to anyone.</p>
+                <div class="mt-3 mb-3 ">
+                    <button class="btn_footer_modal text-bg-danger border-0">Delete Account</button>
+                </div>
+                <p>Feel free to contact with any <a href="#ivp" class="text-decoration-none">dashui@example.com</a>questions.</p>
+            </div>
+        </div>
+      </div>
+        <!-- end Danger Zone -->
+      <!-- start footer  -->
+       <div class="px-4 border-top p-3 d-flex justify-content-between">
+            <div>Made by <a href="https://codescandy.com/" class="text-decoration-none">Codescandy</a></div>
+            <div>Destributed by <a href="https://codescandy.com/" class="text-decoration-none">ThemeWagon</a></div>
+        </div>
+      <!-- end footer  -->
+    </div>
+    <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    <script src="../../script.js"></script>
+  </body>
+</html>

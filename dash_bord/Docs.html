@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash UI - Next.Js Admin Dashboard Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css" />
+  </head>
+  <body class="background_signin">
+    <div class="container-fluid p-0">
+      <!-- startnavbar -->
+      <dav class="d-flex navbar-light bg-body justify-content-between">
+        <div class="d-flex">
+          <!-- startsiadbar -->
+          <div id="mySidebar" class="sidebar">
+            <a
+              href="javascript:void(0)"
+              class="closebtn text-light"
+              onclick="closeNav()"
+              >×</a
+            >
+            <a href="./index.html" class="px-4 fs-4 fw-bold">Dash Ul</a>
+            <a href="./index.html" class="px-4 mt-5"
+              ><i class="fa-solid fa-house pe-2"></i>Dashborad</a
+            >
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >LAYOUTS & PAGES</span
+            >
+            <a
+              class="sidbar-hover mx-4 mt-5 dropdown-toggle opacity-75"
+              href="#sidebarcollapse"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-building-columns opacity-75 pe-2"></i
+              >pages</a
+            >
+
+            <div class="collapse" id="sidebarcollapse">
+              <a
+                href="./pagse/profile.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >profile</a
+              >
+              <a
+                href="./pagse/setting.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >settings</a
+              >
+              <a
+                href="./pagse/Billing.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Billing</a
+              >
+              <a
+                href="./pagse/Pricing.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >pricing</a
+              >
+              <a
+                href="./pagse/erorr.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >404& Erorr</a
+              >
+            </div>
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebardrob"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-lock pe-2"></i> Authentication</a
+            >
+
+            <div class="collapse" id="sidebardrob">
+              <a
+                href="./Authentication/signin.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Sign in</a
+              >
+              <a
+                href="./Authentication/signup.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Sign Up</a
+              >
+              <a
+                href="./Authentication/Forget.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Forget Password</a
+              >
+            </div>
+            <div>
+              <a href="./Layouts.html" class="px-4 mt-4 opacity-75 sidbar-hover"
+                ><i class="fa-solid fa-book pe-3"></i>Layouts</a
+              >
+            </div>
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >UI COMPONENTS</span
+            >
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebardrobdown"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-desktop pe-2"></i>Components</a
+            >
+
+            <div class="collapse" id="sidebardrobdown">
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/accordions"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Accordions</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/alerts"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Alerts</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/badges"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Badges</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/breadcrumbs"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Breadcrumbs</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/buttons"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Buttons</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/button-group"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >ButtonGroup</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/cards"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Cards</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/carousels"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Carousel</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/close-button"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Close Button</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/collapse"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Collapse</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/dropdowns"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Dropdowns</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/list-group"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Listgroup</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/modal"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Modal</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/navs"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Navs</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/navbar"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Navbar</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/offcanvas"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Offcanvas</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/overlays"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Overlays</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/pagination"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Pagination</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/popovers"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Popovers</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/progress"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Progress</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/spinners"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Spinners</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/tables"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Tables</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/toasts"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Toasts</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/tooltips"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Tooltips</a
+              >
+            </div>
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebarMenu"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-arrow-turn-down pe-3"></i>Menu Level</a
+            >
+
+            <div class="collapse" id="sidebarMenu">
+              <a
+                class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                href="#sidebartowlevel"
+                data-bs-toggle="collapse"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                Two Level</a
+              >
+
+              <div class="collapse" id="sidebartowlevel">
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3 px-4"
+                  >Navitem 1</a
+                >
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4"
+                  >Navitem 2</a
+                >
+              </div>
+              <a
+                class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                href="#sidebarThreeLevel"
+                data-bs-toggle="collapse"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >Three Level</a
+              >
+
+              <div class="collapse" id="sidebarThreeLevel">
+                <a
+                  class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                  href="#sidebarNavitem"
+                  data-bs-toggle="collapse"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  >Navitem 1</a
+                >
+
+                <div class="collapse" id="sidebarNavitem">
+                  <a
+                    href="#"
+                    class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3 px-4 pe-4"
+                    >NavChilditem 1</a
+                  >
+                  <a
+                    href="#"
+                    class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4 pe-4"
+                    >NavChilditem 2</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4"
+                  >Navitem 2</a
+                >
+              </div>
+            </div>
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >DOCUMENTATION</span
+            >
+            <a
+              href="./Docs.html"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+              ><i class="fa-solid fa-mattress-pillow"></i>Docs</a
+            >
+            <a
+              href="./Changelog.html"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+              ><i class="fa-solid fa-arrows-to-circle pe-1"></i>changelog</a
+            >
+            <a
+              href="https://codescandy.gumroad.com/l/dashui-nextjs"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+            >
+              <i class="fa-solid fa-download pe-2"></i>Download</a
+            >
+          </div>
+          <!-- end sidbar -->
+          <!-- strat Button sidbar -->
+          <div id="main">
+            <button class="openbtn border-0 bg-body" onclick="openNav()">
+              ☰
+            </button>
+          </div>
+          <!-- end Button sidbar -->
+          <!-- start navbar search -->
+          <div class="d-flex">
+            <form>
+              <input
+                class="form-control me-5 mt-3 w-75"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+          <!-- end navbar search -->
+        </div>
+        <!-- start navbar Button bell -->
+        <div class="d-flex mt-2">
+          <div class="dropdown-1">
+            <button class="dropbtn-3">
+              <i class="fa-regular fa-bell p-3 text-bg-light rounded-5"></i>
+            </button>
+            <div class="dropdown-content-2">
+              <div class="card card-bell-Button_docs">
+                <div class="card-header bg-white">
+                  <h5 class="float-start">Notifications</h5>
+                  <a href="#"
+                    ><i class="fa-solid fa-gear float-end mt-2"></i
+                  ></a>
+                </div>
+                <div class="card-body body-5 p-1">
+                  <div class="card-overflow">
+                    <div class="border-0 bg-light">
+                      <a href="#">
+                        <b>Ris chopra</b>
+                        <label class="opacity-75"
+                          >Mauris blandit erat id nunc blandit, ac eleifend
+                          dolor pretium</label
+                        >
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Neha Kannned</b>
+                        <label class="opacity-75"
+                          >Proin at elit vel est condimentum elementum id in
+                          ante. Maecenas et sapien metus.
+                        </label>
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Nirmala Chauhan</b>
+                        <label class="opacity-75"
+                          >Morbi Maximus nrna lobortis elit sollicitudin
+                          sollicitudieget elit vel pretium.
+                        </label>
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Sina Ray</b>
+                        <label class="opacity-75"
+                          >Sed aliquam augue sit amet mauris volutpat hendrerit
+                          sed nunc eu diam
+                        </label>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-w">
+                  <a
+                    href="https://dash-ui-admin-template.vercel.app/dashboard/notification-history"
+                    class="text-primary"
+                    target="_blank"
+                    >sell all Notifications</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- star Button img -->
+          <div class="dropdown-img">
+            <button class="dropbtn-img">
+              <img src="./imgs/avatar-1.jpg" class="img-Button" alt="" />
+            </button>
+            <div class="dropdown-content-img">
+              <div class="card card-img-Button" style="width: 13rem">
+                <div class="card-body justify-content-center">
+                  <h5>John E. Grainger</h5>
+                  <a href="#" class="Button-img-navbar opacity-75 text-black"
+                    >view my profile</a
+                  >
+                  <hr />
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-person pe-3"></i>Edit Profile</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-chart-line pe-3"></i>Activity Log</a
+                  >
+                  <a href="#" class="text-primary d-block mt-2">
+                    <i class="fa-regular fa-star pe-3"></i>Go Pro</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-gear pe-3"></i>Account Settings</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-power-off pe-3"></i>Sign Out</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end Button img -->
+        </div>
+        <!-- end navbar Button bell -->
+      </dav>
+      <!-- end navbar -->
+    </div>
+    <div class="container-fluid">
+      <div class="container_Docs px-3 mt-4">
+        <div>
+          <h2 class="fw-bold">Dash UI NextJS</h2>
+          <span class="opacity-75"
+            >Welcome to the Dash UI NextJS version of the original Dash UI
+            theme.</span
+          >
+        </div>
+        <hr />
+        <div class="card card_Docs">
+         <div class="card-body">
+           <div> 
+            <h2 class="fw-bold">Getting Started</h2>
+            <p class="fs-5 opacity-75"
+              >A professional Dash UI NextJS Kit that comes with plenty of
+              ready-to-use components that will help you to build more beautiful
+              application (web app).</p
+            >
+            <p class=" mb-3 mt-3 opacity-75"></p>
+              Dash UI Kit is built with the most popular front-end framework
+              <a href="#" style="text-decoration: none;">ReactJS Bootstrap</a> with react-scripts.
+            </p>
+            <p class="opacity-75"
+              >This doc will guide you to understand how Dash UI-NextJS theme is
+              organized, basics of how to customize, and how to compile from the
+              source code if you want.</p
+            >
+           </div>
+            <hr />
+            <div>
+             <h2 class="fw-bold mb-0">
+                Running in Local environment
+            </h2>
+                <p class="opacity-75">
+                    This project is scaffolded using npx create-next-app@latest.
+                </p>
+                <ul style="list-style-type: decimal;">
+
+                    <li>
+                        <h5 class="fw-bold">
+                            Requirements Node.js
+                        </h5>
+                        <p>
+                          Before proceeding you'll need to have the latest stable 
+                          <a href="#" style="text-decoration: none;">nodejs</a>.
+                          Install <span class="text-danger text_smailDocs">Node.js</span> or already have it installed on your machine move to next step
+                        </p>
+                     
+                    </li>
+                    <li>
+                        <h5>Install Dash UI NextJS</h5>
+                        <p> Open the dashui-free-nextjs-admin-template directory with your cmd  or terminal. Open the project folder and install its dependencies.
+                        </p>
+                    <p class="change_buttonBilling text-bg-dark w-100">
+                        cd dashui-free-nextjs-admin-template 
+                    </p>
+                    <p class="change_buttonBilling text-bg-dark w-100 mb-0">
+                        npm install
+                    </p>
+                     <p class="opacity-75">
+                        This command will download all the necessary dependencies for dash UI in the node_modules directory.
+                    </p>
+                    </li>
+                    <li>
+                        <h5>start</h5>
+                        <p class="opacity-75">
+                            Run <span class="text-danger text_smailDocs">npm run dev</span> or <span class="text-danger text_smailDocs">
+                                yarn dev</span> or <span class="text-danger text_smailDocs">pnpm dev</span> to start the development server on http://localhost:3000
+                        </p>
+                        <p>
+                            Visit <a href="http://localhost:3000/" style="text-decoration: none;">http://localhost:3000</a> to view your application
+                        </p>
+                        <p class="opacity-75">
+                            Edit <span class="text-danger text_smailDocs">pages/index.js</span> and see the updated result in your browser
+                        </p>
+                        <p class="change_buttonBilling text-bg-dark w-100 mb-0">
+                            npm run dev
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div>
+              <h2 class="fw-bold mb-0">
+                Creating a Production Build.
+              </h2>
+              <p class="opacity-75">
+                    This project is scaffolded using npx create-next-app@latest.
+              </p>
+              <ul style="list-style-type: decimal;">
+                <li>
+                    <p class="opacity-75">
+                        Run <span class="text-danger text_smailDocs">npm run build</span> command in your project directory to make the Production build app.
+                    </p>
+                     <p class="change_buttonBilling text-bg-dark w-100">
+                          npm run build
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        This output is generated inside the <span class="text-danger text_smailDocs">.next</span> folder:
+                    </p>
+                      <p class="change_buttonBilling text-bg-dark w-100 mb-0">
+                          npm run start
+                    </p>
+                    <p>
+                        Once you execute above command, the production build run locally at <span class="text-danger text_smailDocs">http://localhost:3000</span>.
+                    </p>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div>
+                <h2 class="fw-bold mb-0">
+                    File Structure:
+                </h2>
+                <p class="opacity-75"> 
+                    Inside the zip-file you'll find the following directories and files. Both compiled and minified distrubution files, as well as the source files are included in the package.
+                </p>
+                <div class="text-danger">
+                    <p class="mb-0 text_smailDocs">theme/</p>
+                    <p class="mb-0 text_smailDocs">├── .eslintrc.json</p>
+                    <p class="mb-0 text_smailDocs">├── .gitignore</p>
+                    <p class="mb-0 text_smailDocs">├── jsconfig.json</p>
+                    <p class="mb-0 text_smailDocs">├── next.config.js</p>
+                    <p class="mb-0 text_smailDocs">├── package.json</p>
+                    <p class="mb-0 text_smailDocs">├── package-lock.json</p>
+                    <p class="mb-0 text_smailDocs">├── README.md</p>
+                    <p class="mb-0 text_smailDocs">├── components/</p>
+                    <p class="mb-0 text_smailDocs">├── data/</p>
+                    <p class="mb-0 text_smailDocs">├── hooks/</p>
+                    <p class="mb-0 text_smailDocs">├── layouts/</p>
+                    <p class="mb-0 text_smailDocs">├── pages/</p>
+                    <p class="mb-0 text_smailDocs">├── public/</p>
+                    <p class="mb-0 text_smailDocs">├── fonts</p>
+                    <p class="mb-0 text_smailDocs">│   ├── images</p>
+                    <p class="mb-0 text_smailDocs">│   └── favicon.ico</p>
+                    <p class="mb-0 text_smailDocs">├── routes/</p>
+                    <p class="mb-0 text_smailDocs">├── styles/</p>
+                    <p class="mb-0 text_smailDocs">├── sub-components/</p>
+                    <p class="mb-0 text_smailDocs">└── widgets/</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="px-4 border-top p-3 d-flex justify-content-between"
+      >
+        <div>Made by <a href="https://codescandy.com/">Codescandy</a></div>
+        <div>
+          Destributed by <a href="https://codescandy.com/">ThemeWagon</a>
+        </div>
+      </div>
+    </div>
+    <script src="./Bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>

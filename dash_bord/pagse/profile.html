@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dash UI - Next.Js Admin Dashboard Template</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="background_signin">
+    <div class="container-fluid p-0">
+      <!-- startnavbar -->
+      <dav class="d-flex navbar-light bg-body justify-content-between">
+        <div class="d-flex">
+          <!-- startsiadbar -->
+          <div id="mySidebar" class="sidebar">
+            <a
+              href="javascript:void(0)"
+              class="closebtn text-light"
+              onclick="closeNav()"
+              >×</a
+            >
+            <a href="../index.html" class="px-4 fs-4 fw-bold">Dash Ul</a>
+            <a href="../index.html" class="px-4 mt-5"
+              ><i class="fa-solid fa-house pe-2"></i>Dashborad</a
+            >
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >LAYOUTS & PAGES</span
+            >
+            <a
+              class="sidbar-hover mx-4 mt-5 dropdown-toggle opacity-75"
+              href="#sidebarcollapse"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-building-columns opacity-75 pe-2"></i
+              >pages</a
+            >
+
+            <div class="collapse" id="sidebarcollapse">
+              <a
+                href="./profile.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >profile</a
+              >
+              <a
+                href="./setting.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >settings</a
+              >
+              <a
+                href="./Billing.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Billing</a
+              >
+              <a
+                href="./Pricing.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >pricing</a
+              >
+              <a
+                href="./erorr.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >404& Erorr</a
+              >
+            </div>
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebardrob"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-lock pe-2"></i> Authentication</a
+            >
+
+            <div class="collapse" id="sidebardrob">
+              <a
+                href="../Authentication/signin.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Sign in</a
+              >
+              <a
+                href="../Authentication/signup.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Sign Up</a
+              >
+              <a
+                href="../Authentication/Forget.html"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Forget Password</a
+              >
+            </div>
+            <div>
+              <a
+                href="../Layouts.html"
+                class="px-4 mt-4 opacity-75 sidbar-hover"
+                ><i class="fa-solid fa-book pe-3"></i>Layouts</a
+              >
+            </div>
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >UI COMPONENTS</span
+            >
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebardrobdown"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-desktop pe-2"></i>Components</a
+            >
+
+            <div class="collapse" id="sidebardrobdown">
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/accordions"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Accordions</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/alerts"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Alerts</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/badges"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Badges</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/breadcrumbs"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Breadcrumbs</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/buttons"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Buttons</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/button-group"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >ButtonGroup</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/cards"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Cards</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/carousels"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Carousel</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/close-button"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Close Button</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/collapse"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Collapse</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/dropdowns"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Dropdowns</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/list-group"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Listgroup</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/modal"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Modal</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/navs"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Navs</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/navbar"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Navbar</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/offcanvas"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Offcanvas</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/overlays"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Overlays</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/pagination"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Pagination</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/popovers"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Popovers</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/progress"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Progress</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/spinners"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Spinners</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/tables"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+                >Tables</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/toasts"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Toasts</a
+              >
+              <a
+                href="https://dash-ui-admin-template.vercel.app/components/tooltips"
+                class="d-block mx-4 opacity-50 sidbar-hover mb-2"
+                >Tooltips</a
+              >
+            </div>
+            <a
+              class="sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75"
+              href="#sidebarMenu"
+              data-bs-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="fa-solid fa-arrow-turn-down pe-3"></i>Menu Level</a
+            >
+
+            <div class="collapse" id="sidebarMenu">
+              <a
+                class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                href="#sidebartowlevel"
+                data-bs-toggle="collapse"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                Two Level</a
+              >
+
+              <div class="collapse" id="sidebartowlevel">
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3 px-4"
+                  >Navitem 1</a
+                >
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4"
+                  >Navitem 2</a
+                >
+              </div>
+              <a
+                class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                href="#sidebarThreeLevel"
+                data-bs-toggle="collapse"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >Three Level</a
+              >
+
+              <div class="collapse" id="sidebarThreeLevel">
+                <a
+                  class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75"
+                  href="#sidebarNavitem"
+                  data-bs-toggle="collapse"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  >Navitem 1</a
+                >
+
+                <div class="collapse" id="sidebarNavitem">
+                  <a
+                    href="#"
+                    class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3 px-4 pe-4"
+                    >NavChilditem 1</a
+                  >
+                  <a
+                    href="#"
+                    class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4 pe-4"
+                    >NavChilditem 2</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4"
+                  >Navitem 2</a
+                >
+              </div>
+            </div>
+            <span class="px-4 mt-4 d-block text-light opacity-25"
+              >DOCUMENTATION</span
+            >
+            <a
+              href="../Docs.html"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+              ><i class="fa-solid fa-mattress-pillow"></i>Docs</a
+            >
+            <a
+              href="../Changelog.html"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+              ><i class="fa-solid fa-arrows-to-circle pe-1"></i>changelog</a
+            >
+            <a
+              href="https://codescandy.gumroad.com/l/dashui-nextjs"
+              class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"
+            >
+              <i class="fa-solid fa-download pe-2"></i>Download</a
+            >
+          </div>
+          <!-- end sidbar -->
+          <!-- strat Button sidbar -->
+          <div id="main">
+            <button class="openbtn border-0 bg-body" onclick="openNav()">
+              ☰
+            </button>
+          </div>
+          <!-- end Button sidbar -->
+          <!-- start navbar search -->
+          <div class="d-flex">
+            <form>
+              <input
+                class="form-control me-5 mt-3 w-75"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+          <!-- end navbar search -->
+        </div>
+        <!-- start navbar Button bell -->
+        <div class="d-flex mt-2">
+          <div class="dropdown-1">
+            <button class="dropbtn-3">
+              <i class="fa-regular fa-bell p-3 text-bg-light rounded-5"></i>
+            </button>
+            <div class="dropdown-content-2">
+              <div class="card card-bell-Button_docs">
+                <div
+                  class="card-header bg-white d-flex justify-content-between"
+                >
+                  <div>
+                    <h5 class="">Notifications</h5>
+                  </div>
+                  <div>
+                    <a href="#"
+                      ><i class="fa-solid fa-gear float-end mt-2"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="card-body body-5 p-1">
+                  <div class="card-overflow">
+                    <div class="border-0 bg-light">
+                      <a href="#">
+                        <b>Ris chopra</b>
+                        <label class="opacity-75"
+                          >Mauris blandit erat id nunc blandit, ac eleifend
+                          dolor pretium</label
+                        >
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Neha Kannned</b>
+                        <label class="opacity-75"
+                          >Proin at elit vel est condimentum elementum id in
+                          ante. Maecenas et sapien metus.
+                        </label>
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Nirmala Chauhan</b>
+                        <label class="opacity-75"
+                          >Morbi Maximus nrna lobortis elit sollicitudin
+                          sollicitudieget elit vel pretium.
+                        </label>
+                      </a>
+                    </div>
+                    <div class="border border-end-0 border-start-0">
+                      <a href="#">
+                        <b>Sina Ray</b>
+                        <label class="opacity-75"
+                          >Sed aliquam augue sit amet mauris volutpat hendrerit
+                          sed nunc eu diam
+                        </label>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-w">
+                  <a
+                    href="https://dash-ui-admin-template.vercel.app/dashboard/notification-history"
+                    class="text-primary text-decoration-none"
+                    target="_blank"
+                    >sell all Notifications</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- star Button img -->
+          <div class="dropdown-img">
+            <button class="dropbtn-img">
+              <img src="../imgs/avatar-1.jpg" class="img-Button" alt="" />
+            </button>
+            <div class="dropdown-content-img">
+              <div class="card card-img-Button" style="width: 13rem">
+                <div class="card-body justify-content-center">
+                  <h5>John E. Grainger</h5>
+                  <a href="#" class="Button-img-navbar opacity-75 text-black"
+                    >view my profile</a
+                  >
+                  <hr />
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-person pe-3"></i>Edit Profile</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-chart-line pe-3"></i>Activity Log</a
+                  >
+                  <a href="#" class="text-primary d-block mt-2">
+                    <i class="fa-regular fa-star pe-3"></i>Go Pro</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-gear pe-3"></i>Account Settings</a
+                  >
+                  <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                    <i class="fa-solid fa-power-off pe-3"></i>Sign Out</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end Button img -->
+        </div>
+        <!-- end navbar Button bell -->
+      </dav>
+      <!-- end navbar -->
+    </div>
+    <div class="container-fluid px-3">
+      <div class="container_pricing">
+        <div class="mb-3 mt-4">
+          <h4 class="fw-bold">Overview</h4>
+        </div>
+        <hr />
+      </div>
+      <!-- start card container_Chauhan -->
+      <div>
+        <div class="card position-relative">
+          <div class="card-body lineargrideant"></div>
+          <div class="card-body bodyimgandtextandbutton">
+            <div class="imgposition_cardjitu">
+              <img
+                src="../imgs/avatar-1.jpg"
+                class="imgcard_JituChauhan_profile"
+                alt=""
+              />
+            </div>
+            <div style="margin-left: 110px; border-bottom: 2px solid #ededed">
+              <h3 class="mb-0">Jitu Chauhan</h3>
+              <p class="opacity-75">@imjituchauhan</p>
+            </div>
+
+            <div class="d-flex justify-content-between" style="width: 40%">
+              <p style="color: #624bff">Overview</p>
+              <p class="texthover_cardjituChauhan">Project</p>
+              <p class="texthover_cardjituChauhan">Files</p>
+              <p class="texthover_cardjituChauhan">Teams</p>
+              <p class="texthover_cardjituChauhan">Follwers</p>
+              <p class="texthover_cardjituChauhan">Activity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end card container_Chauhan -->
+      <!-- start two card About Me and Projects Contributions -->
+      <div class="d-flex flex-wrap justify-content-between ms-2 mt-3">
+        <div class="card About_Me mb-3">
+          <div class="card-body ms-3">
+            <h4 class="card-title">About Me</h4>
+            <p class="text-uppercase fw-medium text-dark fs-5 ls-2">BIO</p>
+            <p class="opacity-75">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen
+              disse var ius enim in eros elementum tristique. Duis cursus, mi
+              quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
+            </p>
+            <h6 class="text-uppercase fs-5">POSITION</h6>
+            <p class="opacity-75">Theme designer at Bootstrap.</p>
+            <div
+              class="d-flex justify-content-between container_phoneandEmail mt-5"
+            >
+              <div>
+                <h6 class="text-uppercase fs-5">PHONE</h6>
+                <p class="opacity-75">+32112345689</p>
+                <div class="mt-3">
+                  <h6 class="text-uppercase fs-5">EMAIL</h6>
+                  <p class="opacity-75">+Dashui@gmail.com</p>
+                </div>
+              </div>
+              <div>
+                <h6 class="text-uppercase fs-5">DATE OF BIRTH</h6>
+                <p class="opacity-75">01.10.1997</p>
+                <div class="mt-3">
+                  <h6 class="text-uppercase fs-5">LOCATION</h6>
+                  <p class="opacity-75">Ahmedabad, India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card Contributions">
+          <div class="card-body">
+            <h4 class="card-title pb-3">Projects Contributions</h4>
+            <div class="d-flex flex-wrap justify-content-between">
+              <div>
+                <a href="#" class="text-black text-decoration-none">
+                  <i
+                    class="fa-brands fa-slack border border-1 p-2 me-2 rounded-1"
+                  ></i>
+                  <span class="link-tabel-hover fw-bold">
+                    Slack Figma Design UI
+                  </span>
+                </a>
+                <p class="opacity-75 ms-5">
+                  Project description and details about...
+                </p>
+              </div>
+              <div class="mb-3">
+                <img src="../imgs/avatar-1.jpg" class="img_figmacard" alt="" />
+                <span class="dropdown ms-3">
+                  <button
+                    class="border-0"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Another action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#">
+                        Something else here
+                      </a>
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between">
+              <div class="text-nowrap">
+                <a href="#" class="text-black text-decoration-none">
+                  <i
+                    class="fa-solid fa-staff-snake border border-1 p-2 me-2 rounded-1 text-success"
+                  >
+                  </i>
+                  <span class="link-tabel-hover text-nowrap fw-bold">
+                    Design 3d Character
+                  </span>
+                </a>
+                <p class="opacity-75 ms-5">
+                  Project description and details about...
+                </p>
+              </div>
+              <div class="mb-3">
+                <img src="../imgs/avatar-2.jpg" class="img_figmacard" alt="" />
+                <span class="dropdown ms-3">
+                  <button
+                    class="border-0"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Another action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#">
+                        Something else here
+                      </a>
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between">
+              <div class="text-nowrap">
+                <a href="#" class="text-black text-decoration-none">
+                  <i
+                    class="fa-brands fa-github border border-1 p-2 me-2 rounded-1"
+                  >
+                  </i>
+                  <span class="link-tabel-hover text-nowrap fw-bold">
+                    Github Development
+                  </span>
+                </a>
+                <p class="opacity-75 ms-5">
+                  Project description and details about...
+                </p>
+              </div>
+              <div class="mb-3">
+                <img src="../imgs/avatar-3.jpg" class="img_figmacard" alt="" />
+                <span class="dropdown ms-3">
+                  <button
+                    class="border-0"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Another action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#">
+                        Something else here
+                      </a>
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between">
+              <div class="text-nowrap">
+                <a href="#" class="text-black text-decoration-none">
+                  <i
+                    class="fa-brands fa-dropbox text-primary border border-1 p-2 me-2 rounded-1"
+                  >
+                  </i>
+                  <span class="link-tabel-hover text-nowrap fw-bold">
+                    Dropbox Design System
+                  </span>
+                </a>
+                <p class="opacity-75 ms-5">
+                  Project description and details about...
+                </p>
+              </div>
+              <div class="mb-3">
+                <img src="../imgs/avatar-4.jpg" class="img_figmacard" alt="" />
+                <span class="dropdown ms-3">
+                  <button
+                    class="border-0"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Another action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#">
+                        Something else here
+                      </a>
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between">
+              <div class="text-nowrap">
+                <a href="#" class="text-black text-decoration-none">
+                  <i
+                    class="fa-solid fa-dice-d6 text-bg-primary border border-1 p-2 me-2 rounded-1"
+                  >
+                  </i>
+                  <span class="link-tabel-hover text-nowrap fw-bold">
+                    Project Management
+                  </span>
+                </a>
+                <p class="opacity-75 ms-5">
+                  Project description and details about...
+                </p>
+              </div>
+              <div class="mb-3">
+                <img src="../imgs/avatar-5.jpg" class="img_figmacard" alt="" />
+                <span class="dropdown ms-3">
+                  <button
+                    class="border-0"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#"
+                        >Another action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item link-tabel-hover" href="#">
+                        Something else here
+                      </a>
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end two card About Me and Projects Contributions -->
+      <!-- start card Jitu Chauhan and two card My Team and Activity Feed -->
+      <div class="d-flex justify-content-between flex-wrap mt-4">
+        <div class="About_Me mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex">
+                  <div>
+                    <img
+                      src="../imgs/avatar-1.jpg"
+                      class="img_figmacard"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <span class="fw-bold">Jitu Chauhan </span>
+
+                    <p class="opacity-75">19 minutes ago</p>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <span class="dropdown ms-3">
+                    <button
+                      class="border-0"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li>
+                        <a class="dropdown-item link-tabel-hover" href="#"
+                          >Action</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item link-tabel-hover" href="#"
+                          >Another action</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item link-tabel-hover" href="#">
+                          Something else here
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+              <!-- start text  -->
+              <p class="opacity-75">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen
+                disse var ius enim in eros elementum tristique. Duis cursus, mi
+                quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+                libero vitae erat.
+              </p>
+              <!-- end text -->
+              <!-- start img  -->
+              <div>
+                <img
+                  src="../imgs/blog-img-1.jpg"
+                  class="w-100 rounded-2"
+                  alt=""
+                />
+              </div>
+              <!-- end img -->
+              <!-- start like -->
+              <div class="w-50 d-flex justify-content-between mt-3">
+                <div class="opacity-75">
+                  <i class="fa-regular fa-heart"></i>
+                  <span>20 Like</span>
+                </div>
+                <div class="opacity-75">
+                  <i class="fa-regular fa-message"></i>
+                  <span>12 Comment</span>
+                </div>
+                <div class="opacity-75">
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <span>Share</span>
+                </div>
+              </div>
+              <!-- end like -->
+              <hr />
+              <!-- start text and img -->
+              <div class="d-flex">
+                <div>
+                  <img
+                    src="../imgs/avatar-9.jpg"
+                    class="img_figmacard"
+                    alt=""
+                  />
+                </div>
+                <p class="ms-5 opacity-75">You and 20 more liked this</p>
+              </div>
+              <!-- end text and img -->
+              <hr />
+              <!-- start img and input -->
+              <div class="d-flex">
+                <div>
+                  <img
+                    src="../imgs/avatar-1.jpg"
+                    class="img_figmacard"
+                    alt=""
+                  />
+                </div>
+                <div class="ms-3 d-flex w-100">
+                  <label for="imgcardinput_jitu">Name</label>
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control w-75 ms-4"
+                    id="imgcardinput_jitu"
+                  />
+                  <button type="button" class="ms-3 btn_footer_modal">
+                    post
+                  </button>
+                </div>
+              </div>
+              <!-- end img and input -->
+            </div>
+          </div>
+        </div>
+        <div class="About_Me">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title mb-4">my Team</h5>
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex">
+                  <div>
+                    <img
+                      src="../imgs/avatar-1.jpg"
+                      class="img_figmacard mt-2"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <span class="fw-bold"> Dianna Smiley </span>
+                    <p class="opacity-75">UI / UX Designer</p>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fa-solid fa-phone mx-3"></i>
+                  <i class="fa-solid fa-video"></i>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex">
+                  <div>
+                    <img
+                      src="../imgs/avatar-2.jpg"
+                      class="img_figmacard mt-2"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <span class="fw-bold">Anne Brewer</span>
+                    <p class="opacity-75">Senior UX Designer</p>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fa-solid fa-phone mx-3"></i>
+                  <i class="fa-solid fa-video"></i>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex">
+                  <div>
+                    <img
+                      src="../imgs/avatar-3.jpg"
+                      class="img_figmacard mt-2"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <span class="fw-bold">Richard Christmas</span>
+                    <p class="opacity-75">Front-End Engineer</p>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fa-solid fa-phone mx-3"></i>
+                  <i class="fa-solid fa-video"></i>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex">
+                  <div>
+                    <img
+                      src="../imgs/avatar-4.jpg"
+                      class="img_figmacard mt-2"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <span class="fw-bold">Nicholas Binder</span>
+                    <p class="opacity-75">Content Marketing Manager</p>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fa-solid fa-phone mx-3"></i>
+                  <i class="fa-solid fa-video"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-body">
+              <h5 class="card-title mb-4">Activity Feed</h5>
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex">
+                  <div>
+                    <img
+                      src="../imgs/avatar-6.jpg"
+                      class="img_figmacard mt-2"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <span class="fw-bold">Dianna Smiley</span>
+                    <p class="opacity-75 mb-0">
+                      Just create a new Project in Dashui..
+                    </p>
+                    <p class="opacity-75">2m ago</p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex">
+                  <div>
+                    <img
+                      src="../imgs/avatar-7.jpg"
+                      class="img_figmacard mt-2"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <span class="fw-bold">Irene Hargrove</span>
+                    <p class="opacity-75 mb-0">
+                      Comment on Bootstrap Tutorial Says Hi, I m irene...
+                    </p>
+                    <p class="opacity-75">1hour ago</p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="d-flex">
+                  <div>
+                    <img
+                      src="../imgs/avatar-9.jpg"
+                      class="img_figmacard mt-2"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <span class="fw-bold">Trevor Bradley</span>
+                    <p class="opacity-75 mb-0">
+                      Just share your article on Social Media..
+                    </p>
+                    <p class="opacity-75">2month ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end card Jitu Chauhan and two card My Team and Activity Feed -->
+      <!-- start footer -->
+      <div class="px-4 border-top p-3 d-flex justify-content-between">
+        <div>
+          Made by
+          <a href="https://codescandy.com/" class="text-decoration-none"
+            >Codescandy</a
+          >
+        </div>
+        <div>
+          Destributed by
+          <a href="https://codescandy.com/" class="text-decoration-none"
+            >ThemeWagon</a
+          >
+        </div>
+      </div>
+      <!-- end footer -->
+    </div>
+    <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>

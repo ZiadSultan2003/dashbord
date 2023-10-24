@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash UI - Next.Js Admin Dashboard Template</title>
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container-fluid ">
+        <!-- startnavbar -->
+        <dav class="d-flex navbar-light bg-body  justify-content-between ">
+            <div class="d-flex">
+                <!-- startsiadbar -->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn text-light" onclick="closeNav()">×</a>
+                    <a href="./index.html" class="px-4 fs-4 fw-bold">Dash Ul</a>
+                    <a href="./index.html" class="px-4 mt-5"><i class="fa-solid fa-house pe-2"></i>Dashborad</a>
+                    <span class="px-4 mt-4 d-block text-light opacity-25">LAYOUTS & PAGES</span>
+                    <a class=" sidbar-hover mx-4 mt-5 dropdown-toggle opacity-75" href="#sidebarcollapse"
+                        data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-building-columns opacity-75 pe-2"></i>pages</a>
+
+                    <div class="collapse " id="sidebarcollapse">
+                        <a href="./pagse/profile.html"
+                            class="d-block mx-4 opacity-50  sidbar-hover mb-2 mt-3">profile</a>
+                        <a href="./pagse/setting.html"
+                            class="d-block mx-4 opacity-50  sidbar-hover mb-2">settings</a>
+                        <a href="./pagse/Billing.html"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Billing</a>
+                        <a href="./pagse/Pricing.html"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">pricing</a>
+                        <a href="./pagse/erorr.html"
+                            class="d-block mx-4 opacity-50  sidbar-hover mb-2">404&
+                            Erorr</a>
+                    </div>
+                    <a class=" sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75" href="#sidebardrob"
+                        data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation"><i class="fa-solid fa-lock pe-2"></i> Authentication</a>
+
+                    <div class="collapse " id="sidebardrob">
+                        <a href="./Authentication/signin.html"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Sign in</a>
+                        <a href="./Authentication/signup.html"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Sign Up</a>
+                        <a href="./Authentication/Forget.html"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Forget Password</a>
+                    </div>
+                    <div>
+                        <a href="./Layouts.html"
+                            class="px-4 mt-4 opacity-75 sidbar-hover"><i class="fa-solid fa-book pe-3"></i>Layouts</a>
+                    </div>
+                    <span class="px-4 mt-4 d-block text-light opacity-25">UI COMPONENTS</span>
+                    <a class=" sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75" href="#sidebardrobdown"
+                        data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation"><i class="fa-solid fa-desktop pe-2"></i>Components</a>
+
+                    <div class="collapse " id="sidebardrobdown">
+                        <a href="https://dash-ui-admin-template.vercel.app/components/accordions"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Accordions</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/alerts"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Alerts</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/badges"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Badges</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/breadcrumbs"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Breadcrumbs</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/buttons"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Buttons</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/button-group"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">ButtonGroup</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/cards"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Cards</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/carousels"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Carousel</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/close-button"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Close Button</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/collapse"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Collapse</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/dropdowns"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Dropdowns</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/list-group"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Listgroup</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/modal"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Modal</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/navs"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Navs</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/navbar"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Navbar</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/offcanvas"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Offcanvas</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/overlays"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Overlays</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/pagination"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Pagination</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/popovers"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Popovers</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/progress"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Progress</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/spinners"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Spinners</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/tables"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">Tables</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/toasts"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Toasts</a>
+                        <a href="https://dash-ui-admin-template.vercel.app/components/tooltips"
+                            class="d-block mx-4 opacity-50 sidbar-hover mb-2">Tooltips</a>
+                    </div>
+                    <a class=" sidbar-hover mx-4 mt-3 dropdown-toggle opacity-75" href="#sidebarMenu"
+                        data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation"><i class="fa-solid fa-arrow-turn-down pe-3"></i>Menu
+                        Level</a>
+
+                    <div class="collapse " id="sidebarMenu">
+                        <a class="sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75" href="#sidebartowlevel"
+                            data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation"> Two Level</a>
+
+                        <div class="collapse " id="sidebartowlevel">
+                            <a href="#" class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3 px-4">Navitem 1</a>
+                            <a href="#" class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4">Navitem 2</a>
+
+                        </div>
+                        <a class=" sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75" href="#sidebarThreeLevel"
+                            data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">Three Level</a>
+
+                        <div class="collapse " id="sidebarThreeLevel">
+                            <a class=" sidbar-hover mx-4 mt-3 px-4 dropdown-toggle opacity-75" href="#sidebarNavitem"
+                                data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+                                aria-label="Toggle navigation">Navitem 1</a>
+
+                            <div class="collapse " id="sidebarNavitem">
+
+                                <a href="#"
+                                    class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3 px-4 pe-4">NavChilditem
+                                    1</a>
+                                <a href="#" class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4 pe-4">NavChilditem
+                                    2</a>
+                            </div>
+                            <a href="#" class="d-block mx-4 opacity-50 sidbar-hover mb-2 px-4">Navitem 2</a>
+                        </div>
+                    </div>
+                    <span class="px-4 mt-4 d-block text-light opacity-25">DOCUMENTATION</span>
+                    <a href="./Docs.html"
+                        class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"><i
+                            class="fa-solid fa-mattress-pillow"></i>Docs</a>
+                    <a href="./Changelog.html"
+                        class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3"><i
+                            class="fa-solid fa-arrows-to-circle pe-1"></i>changelog</a>
+                    <a href="https://codescandy.gumroad.com/l/dashui-nextjs"
+                        class="d-block mx-4 opacity-50 sidbar-hover mb-2 mt-3">
+                        <i class="fa-solid fa-download pe-2"></i>Download</a>
+                </div>
+                <!-- end sidbar -->
+                <!-- strat Button sidbar -->
+                <div id="main">
+                    <button class="openbtn border-0 bg-body" onclick="openNav()">☰</button>
+                </div>
+                <!-- end Button sidbar -->
+                <!-- start navbar search -->
+                <div class="d-flex">
+                    <form>
+                        <input class="form-control me-5 mt-3 w-75 " type="search" placeholder="Search"
+                            aria-label="Search">
+                    </form>
+                </div>
+                <!-- end navbar search -->
+            </div>
+            <!-- start navbar Button bell -->
+            <div class="d-flex mt-2 ">
+                <div class="dropdown-1 ">
+                    <button class="dropbtn-3 ">
+                        <i class="fa-regular fa-bell p-3 text-bg-light rounded-5"></i>
+                    </button>
+                    <div class="dropdown-content-2 ">
+                        <div class="card card-bell-Button">
+                            <div class="card-header bg-white ">
+                                <h5 class="float-start">Notifications</h5>
+                                <a href="#"><i class="fa-solid fa-gear float-end mt-2"></i></a>
+                            </div>
+                            <div class="card-body body-5 p-1">
+                                <div class="card-overflow">
+                                    <div class=" border-0 bg-light">
+                                        <a href="#">
+                                            <b>Ris chopra</b>
+                                            <label class="opacity-75">Mauris blandit erat id nunc blandit,
+                                                ac
+                                                eleifend
+                                                dolor
+                                                pretium</label>
+                                        </a>
+                                    </div>
+                                    <div class="border  border-end-0 border-start-0">
+                                        <a href="#">
+                                            <b>Neha Kannned</b>
+                                            <label class="opacity-75">Proin at elit vel est condimentum
+                                                elementum id
+                                                in
+                                                ante. Maecenas et
+                                                sapien metus.
+                                            </label>
+                                        </a>
+                                    </div>
+                                    <div class="border  border-end-0 border-start-0">
+                                        <a href="#">
+                                            <b>Nirmala Chauhan</b>
+                                            <label class="opacity-75">Morbi Maximus nrna lobortis elit
+                                                sollicitudin
+                                                sollicitudieget elit
+                                                vel pretium.
+                                            </label>
+                                        </a>
+                                    </div>
+                                    <div class="border  border-end-0 border-start-0">
+                                        <a href="#">
+                                            <b>Sina Ray</b>
+                                            <label class="opacity-75">Sed aliquam augue sit amet mauris
+                                                volutpat
+                                                hendrerit sed nunc eu diam
+                                            </label>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-w">
+                                <a href="https://dash-ui-admin-template.vercel.app/dashboard/notification-history"
+                                    class="text-primary" target="_blank">sell all Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <!-- star Button img -->
+                <div class="dropdown-img">
+                    <button class="dropbtn-img ">
+                        <img src="./imgs/avatar-1.jpg" class="img-Button" alt="">
+                    </button>
+                    <div class="dropdown-content-img">
+                        <div class="card card-img-Button " style="width: 13rem;">
+                            <div class="card-body justify-content-center">
+                                <h5>John E. Grainger</h5>
+                                <a href="#" class="Button-img-navbar opacity-75 text-black">view my profile</a>
+                                <hr>
+                                <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                                    <i class="fa-solid fa-person pe-3 "></i>Edit Profile</a>
+                                <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                                    <i class="fa-solid fa-chart-line pe-3"></i>Activity Log</a>
+                                <a href="#" class="text-primary d-block mt-2">
+                                    <i class="fa-regular fa-star pe-3"></i>Go Pro</a>
+                                <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                                    <i class="fa-solid fa-gear pe-3"></i>Account Settings</a>
+                                <a href="#" class="Button-img-navbar d-block mt-2 text-black">
+                                    <i class="fa-solid fa-power-off pe-3"></i>Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end Button img -->
+            </div>
+            <!-- end navbar Button bell -->
+        </dav>
+        <!-- end navbar -->
+    </div>
+    <div class="container-fluid p-0  bg-light">
+        <!-- start four card blue -->
+        <div class="fourcardblue ">
+            <!-- start tital of button -->
+            <div class="d-flex justify-content-between ">
+                <span class="text-white fs-4 m-4">project</span>
+                <a href="#" class="btn btn-light m-4">Create new project</a>
+            </div>
+            <!-- end tital of button -->
+            <!-- start four card -->
+            <div class="fourcardcontent">
+                <div class="card m-2" style="width: 21rem;">
+                    <div class="card-body">
+                        <i
+                            class="fa-solid fa-envelope fa-lg float-end mt-2 border border-1 p-3 rounded-1 icon-card-four-card"></i>
+                        <h4 class="card-title p-2">Projects</h4>
+                        <h1 class="card-text h1_font">18</h1>
+                        <span>2 Completed</span>
+                    </div>
+                </div>
+
+                <div class="card m-2" style="width: 21rem;">
+                    <div class="card-body">
+                        <i
+                            class="fa-solid fa-list float-end border p-2 mt-2 border-1  rounded-1 icon-card-four-card"></i>
+                        <h4 class="card-title p-2">Active Task</h4>
+                        <h1 class="card-text h1_font">132</h1>
+                        <span>28 Completed</span>
+                    </div>
+                </div>
+
+                <div class="card m-2" style="width: 21rem;">
+                    <div class="card-body">
+                        <i
+                            class="fa-solid fa-people-group float-end mt-2 border border-1 p-2 rounded-1 icon-card-four-card"></i>
+                        <h4 class="card-title p-2">Teams</h4>
+                        <h1 class="card-text h1_font">12</h1>
+                        <span>1 Completed</span>
+                    </div>
+                </div>
+
+                <div class="card m-2" style="width: 21rem;">
+                    <div class="card-body">
+                        <i
+                            class="fa-solid fa-podcast float-end mt-2 border border-1 p-2 rounded-1 icon-card-four-card"></i>
+                        <h4 class="card-title p-2">Productivity</h4>
+                        <h1 class="card-text h1_font">76%</h1>
+                        <span>5% Completed</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end four card -->
+        </div>
+        <!-- end four card blue -->
+        <!-- start table after card -->
+        <div class="row px-4">
+            <div class="col-md-12 bg-light  table-responsive table_center">
+                <table class="table caption-top border-start border-end">
+                    <caption class="p-3 border border-start-0 border-end-0 rounded-top-2 bg-body">
+                        <h4>Active Projects</h4>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <td scope="col" class="p-3 bg-light opacity-75">Project Name</td>
+                            <td scope="col" class="p-3 bg-light opacity-75">Hours</td>
+                            <td scope="col" class="p-3 bg-light opacity-75">Priority</td>
+                            <td scope="col" class="p-3 bg-light opacity-75">Members</td>
+                            <td scope="col" class="p-3 bg-light opacity-75">Progress</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-3 text-nowrap"><a href="#"         class="text-black">
+                                <i class="fa-brands fa-dropbox text-primary border border-1 p-2 me-2 rounded-1">
+                                </i>
+                                    <span class="link-tabel-hover text-nowrap">Dropbox Design System</span></a></td>
+                            <td class="p-3">34</td>
+                            <td class="mt-3"><span class="badge bg-warning text-white rounded-3">Medium</span></td>
+                            <td class="p-3">
+                                <img src="./imgs/avatar-1.jpg" class="rounded-5" style="width: 30px;height: 30px;" alt="">
+                          </td>
+                            <td class="p-3 ">
+                                <div class="">
+                                    <span class="">15%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%; "
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td  class="p-3 text-nowrap"><a href="#" class="text-black">
+                                <i class="fa-brands fa-slack  border border-1 p-2 me-2 rounded-1"></i><span
+                                        class="link-tabel-hover  text-nowrap">Slack Team UI Design</span></a></td>
+                            <td class="p-3">47</td>
+                            <td class="mt-3"><span class=" badge text-bg-danger rounded-3">High</span></td>
+                            <td class="p-3">
+                                <img src="./imgs/avatar-2.jpg" class="rounded-5" style="width: 30px;height: 30px;" alt="">
+                          </td>
+                            <td class="p-3">
+                                <span>35%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="p-3 text-nowrap"><a href="#" class="text-black">
+                                    <i class="fa-brands fa-github
+                                     border border-1 p-2 me-2 rounded-1"></i>
+                                    <span class="link-tabel-hover text-nowrap">GitHub Satellite</span></a>
+
+                            </td>
+                            <td class="p-3">120</td>
+                            <td class="mt-3"><span class="badge text-white bg-info rounded-3">low</span></td>
+                            <td class="p-3">
+                                <img src="./imgs/avatar-3.jpg" class="rounded-5" style="width: 30px;height: 30px;" alt="">
+                          </td>
+                            <td class="p-3">
+                                <span>75%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-nowrap"><a href="#" class="text-black"><i class="fa-brands fa-unity text-success 
+                                        border border-1 p-2 me-2 rounded-1"></i>
+                                    <span class="link-tabel-hover text-nowrap">3D Character Modelling</span></a></td>
+                            <td class="p-3">89</td>
+                            <td class="mt-3"><span class=" badge bg-warning text-white rounded-3">Medium</span></td>
+                            <td class="p-3">
+                                <img src="./imgs/avatar-4.jpg" class="rounded-5" style="width: 30px;height: 30px;" alt="">
+                          </td>
+                            <td class="p-3">
+                                <span>63%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 63%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="p-3 text-nowrap"><a href="#" class="text-black"><i
+                                        class="fa-solid fa-dice-d6 border border-1 p-2 me-2 rounded-1 icon-tabel"></i><span
+                                        class="link-tabel-hover text-nowrap">Webapp Design System</span></a></td>
+                            <td class="p-3">108</td>
+                            <td class="mt-3"><span class="badge text-bg-success rounded-3">Track</span></td>
+                            <td class="p-3">
+                                <img src="./imgs/avatar-5.jpg" class="rounded-5" style="width: 30px;height: 30px;" alt="">
+                          </td>
+                            <td class="p-3">
+                                <span>100%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="p-3 text-nowrap">
+                                <a href="#" class="text-black"><i
+                                        class="fa-brands fa-github border border-1 p-2 me-2 rounded-1"></i><span
+                                        class="link-tabel-hover text-nowrap">Github Event Design</span>
+                              </a>
+                            </td>
+                            <td class="p-3">120</td>
+                            <td class="mt-3"><span class="badge text-white bg-info rounded-3">low</span></td>
+                            <td class="p-3">
+                                <img src="./imgs/avatar-6.jpg" class="rounded-5" style="width: 30px;height: 30px;" alt="">
+                          </td>
+                            <td class="p-3 ">
+                                <span>75%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="border-to">
+                        <td colspan="5" class="text-center"><a href="#">View All Projects</a></td>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
+        <!-- end table after card -->
+        <!-- strat table and card -->
+        <div class="row px-4 ">
+            <div class="col-md-4 mb-2">
+                <div class="card" style="height: 99%;">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="float-start">Tasks Performance</h5>
+                            <div class="dropdown float-end">
+                                <button class="border-0 " type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis-vertical text-bg-light"></i>
+                                </button>
+                                <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item link-tabel-hover" href="#">Action</a></li>
+                                    <li><a class="dropdown-item link-tabel-hover" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item link-tabel-hover" href="#">Something else here</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="empty_redius">
+                            <div class="redius">
+                              <div class="redius_2">
+                                <div class="redius_3"></div>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="row mt-5">
+                            <div class="col-4">
+                                <i class="fa-regular fa-circle-check fa-xl p-3 text-success"></i>
+
+                                <span class="fs-2 d-block"><b>76%</b></span>
+                                <span class="d-block">Completed</span>
+                            </div>
+                            <div class="col-4">
+                                <i class="fa-solid fa-arrow-trend-up fa-xl  p-3 text-warning"></i>
+
+                                <span class="fs-2 d-block"><b>32%</b></span>
+                                <span class="d-block">In-Progress</span>
+                            </div>
+                            <div class="col-4">
+                                <i class="fa-solid fa-arrow-trend-down fa-xl  p-3 text-danger"></i>
+
+                                <span class="fs-2 d-block"><b>13%</b></span>
+                                <span class="d-block">Behind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 table-responsive" >
+                <table class="table caption-top border-start border-end">
+                    <caption class="p-3 border  rounded-top-2 bg-body">
+                        <h4>Teams</h4>
+                    </caption>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <td scope="col" class="p-3 bg-light opacity-75">Name</td>
+                            <td scope="col" class="p-3 bg-light opacity-75">Role</td>
+                            <td scope="col" class="p-3 bg-light opacity-75" colspan="2">Last Activity</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="align-middle">
+                            <td scope="row">
+                                <img src="./imgs/avatar-2.jpg" class="img-table" alt=""><span class="ms-2">Anit
+                                    Parmar</span>
+                                <span class="d-block opacity-75 ms-5">anita@example.com</span>
+                            </td>
+                            <td><span class="opacity-75">Front End Developer</span></td>
+                            <td><span class="opacity-75">3 May, 2023</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="border-0" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Action</a></li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Another action</a>
+                                        </li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Something else
+                                                here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="align-middle">
+                            <td scope="row"> <img src="./imgs/avatar-1.jpg" class="img-table" alt=""><span
+                                    class="ms-2">Jitu Chauhan</span>
+                                <span class="d-block opacity-75 ms-5">jituchauhan@example.com</span>
+                            </td>
+                            <td><span class="opacity-75">Project Director</span></td>
+                            <td><span class="opacity-75">Today</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="border-0" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical text-bg-light"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Action</a></li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Another action</a>
+                                        </li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Something else
+                                                here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="align-middle">
+                            <td scope="row"><img src="./imgs/avatar-3.jpg" class="img-table" alt=""><span
+                                    class="ms-2">Sandeep Chauhan</span>
+                                <span class="d-block opacity-75 ms-5">sandeepchauhan@example.com</span>
+                            </td>
+                            <td><span class="opacity-75">Full- Stack Developer</span></td>
+                            <td><span class="opacity-75">Yesterday</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="border-0" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical text-bg-light"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Action</a></li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Another action</a>
+                                        </li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Something else
+                                                here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="align-middle">
+                            <td scope="row"> <img src="./imgs/avatar-4.jpg" class="img-table" alt=""><span
+                                    class="ms-2">Amanda Darnell</span>
+                                <span class="d-block opacity-75 ms-5">
+                                    amandadarnell@example.com</span>
+                            </td>
+                            <td><span class="opacity-75">Account Manager</span></td>
+                            <td><span class="opacity-75">3 May, 2023</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="border-0" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical text-bg-light"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Action</a></li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Another action</a>
+                                        </li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Something else
+                                                here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="align-middle">
+                            <td scope="row"><img src="./imgs/avatar-5.jpg" class="img-table" alt="">
+                                <span class="ms-2">Patricia Murrill</span>
+                                <span class="d-block opacity-75 ms-5">
+                                    patriciamurrill@example.com</span>
+                            </td>
+                            <td><span class="opacity-75">Digital Marketer</span></td>
+                            <td><span class="opacity-75">3 May, 2023</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="border-0" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical text-bg-light"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Action</a></li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Another action</a>
+                                        </li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Something else
+                                                here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="align-middle">
+                            <td scope="row"> <img src="./imgs/avatar-6.jpg" class="img-table" alt=""><span
+                                    class="ms-2">Darshini Nair</span>
+                                <span class="d-block opacity-75 ms-5">
+                                    darshininair@example.com</span>
+                            </td>
+                            <td><span class="opacity-75">Front End Developer</span></td>
+                            <td><span class="opacity-75">3 May, 2023</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="border-0" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical text-bg-light"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Action</a></li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Another action</a>
+                                        </li>
+                                        <li><a class="dropdown-item link-tabel-hover" href="#">Something else
+                                                here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!-- end table and card -->
+        <!-- start footer -->
+        <div class="px-4 border-top p-3 d-flex justify-content-between">
+            <div>Made by <a href="https://codescandy.com/">Codescandy</a></div>
+            <div>Destributed by <a href="https://codescandy.com/">ThemeWagon</a></div>
+        </div>
+        <!-- end footer -->
+    </div>
+
+    <script src="./Bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+</html>
